@@ -129,6 +129,7 @@ public class Exercises {
             }
             current = current.next;
         }
+        return head;
     }
 
     /* ------ OPTIONAL CHALLENGE PROBLEMS ------ */
