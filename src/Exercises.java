@@ -114,18 +114,15 @@ public class Exercises {
         if(head == null || head.next == null){
             return null;
         }
-        ListNode current = head;
-        int min = head.data;
-        while(current != null){
-            if(current.data<min){
-                min = current.data;
-            }
-            current = current.next;
+        int min = min(head);
+        if(head.data == min){
+            return head.next;
         }
+        ListNode current = head;
 
-        while(current != null){
-            if(current.data != min){
-                current = current.next;
+        while(current.next != null){
+            if(current.next.data == min){
+                current.next = current.next.next;
             }
             current = current.next;
         }
